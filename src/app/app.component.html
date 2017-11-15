@@ -1,0 +1,40 @@
+<h1>Users data</h1>
+
+<div *ngIf="usersModel">
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">surname</th>
+        <th scope="col">date of birth</th>
+        <th scope="col">mobile number</th>
+        <th scope="col">address(city + street + house number)</th>
+        <th scope="col">
+          <button type="button" class="btn btn-success">Edit selected</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usersModel">
+        <td>
+          <label class="checkbox-inline">
+            <input type="checkbox" [ngModel]="isChecked" (ngModelChange)="changeValue()" value="">
+          </label>
+        </td>
+        <th scope="row">{{user.id}}</th>
+        <td><input [(ngModel)]="user.name"></td>
+        <td><input [(ngModel)]="user.surname"></td>
+        <td><input [(ngModel)]="user.dateOfBirth"></td>
+        <td><input [(ngModel)]="user.mobileNumber"></td>
+        <td><input [(ngModel)]="user.address"></td>
+        <td>
+          <button (click)="updateUser(user.id, user); abc()" type="button" class="btn btn-success">Edit</button> &nbsp;
+          <button (click)="deleteUser(user.id)" type="button" class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

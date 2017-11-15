@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "Krzysztof",
+      "surname": "Figiel",
+      "dateOfBirth": "15-01-1994",
+      "mobileNumber": "660999999",
+      "address": "Mnichowo, ul. Sosnowa",
+      "selected": "false"
+    }
+  ]
+}
