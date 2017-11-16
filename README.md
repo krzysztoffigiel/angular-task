@@ -35,7 +35,7 @@ To run JSON server run this command in project folder: `$ json-server --watch "s
 
 To serve project run this command `$ ng serve --proxy-config proxy.conf.json`
 
-I was generated the project and users-list service by Angular 2 commands CLI so it could make a few bugs like problems with dynamic page content refreshing. 
+I was generated the project and users-list service by Angular 2 CLI commands so it could make a few bugs like problems with dynamic page content refreshing. 
 
 ## Run Jasmine tests
 
