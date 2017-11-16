@@ -12,15 +12,15 @@
         <th scope="col">mobile number</th>
         <th scope="col">address(city + street + house number)</th>
         <th scope="col">
-          <button type="button" class="btn btn-success">Edit selected</button>
+          <button type="button" class="btn btn-success" (click)="updateUsers()">Edit selected</button>
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of usersModel">
+      <tr *ngFor="let user of usersModel; let i=index;">
         <td>
           <label class="checkbox-inline">
-            <input type="checkbox" [ngModel]="isChecked" (ngModelChange)="changeValue()" value="">
+            <input [(ngModel)]="user.selected" type="checkbox" (change)="checkbox(user)">
           </label>
         </td>
         <th scope="row">{{user.id}}</th>
@@ -30,7 +30,7 @@
         <td><input [(ngModel)]="user.mobileNumber"></td>
         <td><input [(ngModel)]="user.address"></td>
         <td>
-          <button (click)="updateUser(user.id, user); abc()" type="button" class="btn btn-success">Edit</button> &nbsp;
+          <button (click)="updateUser(user.id, user);" type="button" class="btn btn-success">Edit</button> &nbsp; 
           <button (click)="deleteUser(user.id)" type="button" class="btn btn-danger">Delete</button>
         </td>
       </tr>

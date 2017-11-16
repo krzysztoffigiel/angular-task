@@ -19,6 +19,7 @@ export class AppComponent {
   usersModel: Array<IUsers> = [];
   user: IUsers;
   isChecked: boolean = false;
+  activeUser: Array<IUsers> = [];
 
   constructor(fb: FormBuilder, private usersService: UsersListService, private modalService: NgbModal) { }
 
@@ -29,7 +30,20 @@ export class AppComponent {
       error => this.errorMessage = <any>error
       )
   }
+  //updating multiple users
+  updateUsers() {
+    this.activeUser.forEach(element => {
+      this.usersService.updateUsers(element.id, element)
+        .subscribe(
+        res => {
+          console.log("User response after update: ", res);
+        },
+        error => this.errorMessage = <any>error
+        )
+    });
 
+  }
+  //updating one user
   updateUser(id: number, user: IUsers) {
     this.usersService.updateUsers(id, user)
       .subscribe(
@@ -40,14 +54,16 @@ export class AppComponent {
       )
   }
 
-  changeValue() {
-    this.isChecked = !this.isChecked;
+  checkbox(user) {
+    //user.selected = (!user.selected) ? false : true;
+    if (user.selected) {
+      this.activeUser.push(user);
+    } else if (!user.selected) {
+      this.activeUser.pop();
+    }
+    console.log(user.selected);
+    console.log(this.activeUser);
   }
-
-  abc() {
-    console.log(this.isChecked);
-  }
-
   getUsers() {
     this.usersService.getUsers()
       .subscribe(

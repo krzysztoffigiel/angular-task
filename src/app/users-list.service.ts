@@ -29,11 +29,13 @@ export class UsersListService {
       .catch((error: any) => Observable.throw(error.json()));
   }
 
-  updateUsers(id:number, user: IUsers): Observable<any> {
-    let body = JSON.stringify(user);
+  updateUsers(id: number, user: IUsers): Observable<any> {
     let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    let body = JSON.stringify(user);
+
     return this.http
-    .put(`${usersAPI}/${id}`, body, {headers: headers})
+    .put(`${usersAPI}/${id}`, body, options)
     .map(res => res.json())
     .catch((error: any) => Observable.throw(error.json()));
   }

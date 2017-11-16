@@ -1,13 +1,22 @@
 {
   "users": [
     {
-      "id": 2,
-      "name": "Krzysztof",
-      "surname": "Figiel",
+      "id": 0,
+      "name": "Lolek",
+      "surname": "Łuczak",
       "dateOfBirth": "15-01-1994",
-      "mobileNumber": "660999999",
+      "mobileNumber": "666666666",
       "address": "Mnichowo, ul. Sosnowa",
-      "selected": "false"
+      "selected": true
+    },
+    {
+      "id": 2,
+      "name": "Sylwia",
+      "surname": "Duszyńska",
+      "dateOfBirth": "01.04.1992",
+      "mobileNumber": "510134994",
+      "address": "Mnichowo, ul. Sosnowa",
+      "selected": true
     }
   ]
 }
