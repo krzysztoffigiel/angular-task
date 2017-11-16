@@ -26,3 +26,17 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## JSON Server
+
+To run JSON server run this command in project folder: `$ json-server --watch "src/assets/users.json"`
+
+## Project serve & proxy
+
+To serve project run this command `$ ng serve --proxy-config proxy.conf.json`
+
+I was generated the project and users-list service by Angular 2 commands CLI so it could make a few bugs like problems with dynamic page content refreshing. 
+
+## Run Jasmine tests
+
+To run Jasmine tests use the following command: `npm test`

@@ -30,6 +30,7 @@ export class AppComponent {
       error => this.errorMessage = <any>error
       )
   }
+  
   //updating multiple users
   updateUsers() {
     this.activeUser.forEach(element => {
@@ -64,6 +65,7 @@ export class AppComponent {
     console.log(user.selected);
     console.log(this.activeUser);
   }
+
   getUsers() {
     this.usersService.getUsers()
       .subscribe(
