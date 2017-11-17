@@ -2,20 +2,29 @@
   "users": [
     {
       "id": 0,
-      "name": "Lolek",
-      "surname": "Łuczak",
+      "name": "name0",
+      "surname": "surname0",
       "dateOfBirth": "15-01-1994",
-      "mobileNumber": "666666666",
-      "address": "Mnichowo, ul. Sosnowa",
+      "mobileNumber": "660699567",
+      "address": "Poznan, Bulgarska 3",
+      "selected": true
+    },
+    {
+      "id": 1,
+      "name": "name1",
+      "surname": "surname1",
+      "dateOfBirth": "18-05-1981",
+      "mobileNumber": "667899787",
+      "address": "Gdansk, Ochocka 14",
       "selected": true
     },
     {
       "id": 2,
-      "name": "Sylwia",
-      "surname": "Duszyńska",
-      "dateOfBirth": "01.04.1992",
-      "mobileNumber": "510134994",
-      "address": "Mnichowo, ul. Sosnowa",
+      "name": "name2",
+      "surname": "surname2",
+      "dateOfBirth": "13-02-2001",
+      "mobileNumber": "661315412",
+      "address": "Warsaw, Poznanska 13A",
       "selected": true
     }
   ]

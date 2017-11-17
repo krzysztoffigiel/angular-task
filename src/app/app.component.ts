@@ -40,7 +40,7 @@ export class AppComponent {
           console.log("User response after update: ", res);
         },
         error => this.errorMessage = <any>error
-        )
+        );
     });
 
   }
@@ -52,14 +52,14 @@ export class AppComponent {
         console.log("User response after update: ", res);
       },
       error => this.errorMessage = <any>error
-      )
+      );
   }
 
   checkbox(user) {
     //user.selected = (!user.selected) ? false : true;
     if (user.selected) {
       this.activeUser.push(user);
-    } else if (!user.selected) {
+    } else {
       this.activeUser.pop();
     }
     console.log(user.selected);
@@ -71,6 +71,9 @@ export class AppComponent {
       .subscribe(
       users => {
         this.usersModel = users;
+        this.usersModel.forEach(element => {
+          element.selected = false;
+        });
         console.log("Users model", this.usersModel);
       }
       );
@@ -80,5 +83,5 @@ export class AppComponent {
     this.getUsers();
   }
 
-  title = 'app';
+  title = 'Users data';
 }
