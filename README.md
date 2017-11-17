@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.2.
 
-# Install
+## Install
 
 `npm install`
 
@@ -18,12 +18,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 To run JSON server run this command in project folder: `$ json-server --watch "src/assets/users.json"`. Endpoints are created automatically by JSON server. For example: 
 ```PUT    /employees/{id}```
-
-## Project serve & proxy
-
-To serve dev project run this command `$ ng serve --proxy-config proxy.conf.json`.
-
-I was generated the project by Angular 2 CLI commands so it could make a few bugs, like problems with dynamic page content refreshing. 
 
 ## Run Jasmine tests
 
